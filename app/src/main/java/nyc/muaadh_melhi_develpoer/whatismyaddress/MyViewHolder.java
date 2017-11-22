@@ -34,6 +34,8 @@ class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListen
     @Override
     public void onClick(View v) {
         Intent intent = new Intent (v.getContext(), DisplayActivity.class);
+        String str=textView.getText().toString();
+        intent.putExtra("str",str);
         v.getContext().startActivity(intent);
 
     }
